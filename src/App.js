@@ -1,13 +1,13 @@
 import Row from "./components/Row";
 import request from "./request";
 
-import "./App.scss";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <h1>Netflix Clone FrontEnd</h1>
-      <Row title="NETFLIX ORIGINALS" fetchUrl={request.fetchNetflixOriginals} />
+      <Row title="NETFLIX ORIGINALS" fetchUrl={request.fetchNetflixOriginals} isLargeRow/>
       <Row title="Trending Now" fetchUrl={request.fetchTrending} />
       <Row title="Top Rated" fetchUrl={request.fetchTopRated} />
       <Row title="Action Movies" fetchUrl={request.fetchActionMovies} />

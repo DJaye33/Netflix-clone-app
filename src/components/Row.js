@@ -1,10 +1,10 @@
 import React from "react";
 
-import "../styles/Row.scss";
+import "../styles/Row.css";
 
 const base_Url = "https://image.tmdb.org/t/p/original/";
 
-function Row({ title, fetchUrl }) {
+function Row({ title, fetchUrl, isLargeRow }) {
   const [movies, setMovies] = React.useState([]);
 
   React.useEffect(() => {
@@ -22,9 +22,11 @@ function Row({ title, fetchUrl }) {
         {movies.map((movie) => (
           <img
             key={movie.id}
-            src={`${base_Url}${movie.poster_path}`}
+            src={`${base_Url}${
+              isLargeRow ? movie.poster_path : movie.backdrop_path
+            }`}
             alt={movie.name}
-            className="row__poster"
+            className={`row__poster ${isLargeRow && "row__posterLarge"}`}
           />
         ))}
       </div>
