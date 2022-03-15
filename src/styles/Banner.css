@@ -2,6 +2,7 @@
   color: #fff;
   object-fit: contain;
   height: 44.8rem;
+  position: relative;
 }
 
 .banner__contents {
@@ -38,4 +39,24 @@
   padding-top: 0.8rem;
   background-color: rgba(51, 51, 51, 0.5);
   padding-bottom: 0.8rem;
+}
+
+.banner__button:hover {
+  color: #000;
+  background-color: #e6e6e6;
+  transition: all 0.2s;
+}
+
+.banner--fadeBottom {
+  height: 7.4rem;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(37, 37, 37, 0.61),
+    #111
+  );
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
