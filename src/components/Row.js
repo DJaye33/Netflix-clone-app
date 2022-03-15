@@ -2,7 +2,7 @@ import React from "react";
 
 import "../styles/Row.css";
 
-const base_Url = "https://image.tmdb.org/t/p/original/";
+const base_Url = "https://image.tmdb.org/t/p/original/"; // For Images
 
 function Row({ title, fetchUrl, isLargeRow }) {
   const [movies, setMovies] = React.useState([]);
