@@ -21,3 +21,7 @@ body {
 .App {
   background-color: #111;
 }
+
+.row h2 {
+  font-size: 2.6rem;
+}

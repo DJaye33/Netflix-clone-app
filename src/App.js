@@ -1,5 +1,7 @@
 import Row from "./components/Row";
 import Banner from "./components/Banner";
+import Nav from "./components/Nav";
+
 import request from "./request";
 
 import "./App.css";
@@ -7,8 +9,13 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Banner fetchUrl={request.fetchNetflixOriginals}/>
-      <Row title="NETFLIX ORIGINALS" fetchUrl={request.fetchNetflixOriginals} isLargeRow/>
+      <Nav />
+      <Banner fetchUrl={request.fetchNetflixOriginals} />
+      <Row
+        title="NETFLIX ORIGINALS"
+        fetchUrl={request.fetchNetflixOriginals}
+        isLargeRow
+      />
       <Row title="Trending Now" fetchUrl={request.fetchTrending} />
       <Row title="Top Rated" fetchUrl={request.fetchTopRated} />
       <Row title="Action Movies" fetchUrl={request.fetchActionMovies} />
