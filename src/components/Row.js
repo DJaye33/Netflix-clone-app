@@ -9,7 +9,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
 
   React.useEffect(() => {
     (async () => {
-      const response = await fetch(`https://api.themoviedb.org/3${fetchUrl}/`);
+      const response = await fetch(`https://api.themoviedb.org/3${fetchUrl}`);
       const data = await response.json();
       setMovies(data.results);
     })();
