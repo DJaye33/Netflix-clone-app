@@ -16,7 +16,7 @@ function Banner({ fetchUrl }) {
   }, [fetchUrl]);
 
   function truncate(str, n) {
-      return str?.length > n ? str.substring(0, n - 1) + "..." : str;
+    return str?.length > n ? str.substring(0, n - 1) + "..." : str;
   }
 
   return (
@@ -29,10 +29,14 @@ function Banner({ fetchUrl }) {
       }}
     >
       <div className="banner__contents">
-        <h1 className="banner__title">{movie?.title || movie?.name || movie?.original_name}</h1>
+        <h1 className="banner__title">
+          {movie?.title || movie?.name || movie?.original_name}
+        </h1>
         <button className="banner__button">Play</button>
         <button className="banner__button">My List</button>
-        <h2 className="banner__description">{truncate(movie?.overview, 150)}</h2>
+        <h2 className="banner__description">
+          {truncate(movie?.overview, 150)}
+        </h2>
       </div>
       <div className="banner--fadeBottom"></div>
     </header>
